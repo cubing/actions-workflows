@@ -10,6 +10,7 @@ Usage:
 
 ```shell
 # bash
+mkdir -p ./.github/workflows
 cat << CONTENTS > ./.github/workflows/publish-github-release.yaml
 name: Publish GitHub release
 
