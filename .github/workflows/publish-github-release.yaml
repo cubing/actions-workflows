@@ -1,9 +1,8 @@
-name: GitHub Release
+
+name: Publish GitHub release
 
 on:
-  push:
-    tags:
-      - v*
+  workflow_call:
 
 jobs:
   Publish:
@@ -19,15 +18,15 @@ jobs:
           echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
       # We'd use `github.event.head_commit.message`, but that includes the first line of the message. So we check out the code.
       - name: Check out code for release body calculation using `git` itself
-        uses: actions/checkout@v3
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: Calculate release body
         run: git log --format=%b -n 1 HEAD >> /tmp/body-path.txt
       - name: Publish release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@c9b46fe7aad9f02afd89b12450b780f52dacfb2d
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ env.RELEASE_NAME }}
           body_path: /tmp/body-path.txt
           draft: false
-          prerelease: false
+          prerelease: falsech
