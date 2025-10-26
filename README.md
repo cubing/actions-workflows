@@ -4,7 +4,7 @@
 
 ## Publish GitHub release
 
-Automatically publisheds a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) when a tag starting with `v` (e.g. `v0.1.3`) is pushed. This allows the latest release to show up in the sidebar of the project page on GitHub.
+Automatically publishes a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) when a tag starting with `v` (e.g. `v0.1.3`) is pushed. This allows the latest release to show up in the sidebar of the project page on GitHub.
 
 Usage:
 
