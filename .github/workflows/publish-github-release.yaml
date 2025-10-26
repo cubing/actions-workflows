@@ -1,4 +1,3 @@
-
 name: Publish GitHub release
 
 on:
@@ -29,4 +28,4 @@ jobs:
           tag_name: ${{ env.RELEASE_NAME }}
           body_path: /tmp/body-path.txt
           draft: false
-          prerelease: falsech
+          prerelease: false
