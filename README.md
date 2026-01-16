@@ -24,7 +24,7 @@ jobs:
     permissions:
       contents: write
     if: startsWith(github.ref, 'refs/tags/v')
-    uses: cubing/actions-workflows/.github/workflows/publish-github-release.yaml@main
+    uses: cubing/actions-workflows/workflows/publish-github-release@main
 CONTENTS
 ```
 
