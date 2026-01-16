@@ -1,6 +1,6 @@
 # GitHub Actions workflows
 
-[Reusable GitHub Actions workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows) for https://github.com/cubing projects.
+[Reusable GitHub Actions workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows) for <https://github.com/cubing> projects.
 
 ## Publish GitHub release
 
@@ -27,3 +27,20 @@ jobs:
     uses: cubing/actions-workflows/.github/workflows/publish-github-release.yaml@main
 CONTENTS
 ```
+
+## Install `fish`
+
+Installs `fish` from: <https://github.com/fish-shell/fish-shell/releases>
+
+Because `fish` is already compiled, this is *much* faster than other actions that install from source.
+
+Usage:
+
+```yaml
+    uses: cubing/actions-workflows/actions/install-fish@main
+```
+
+At the moment:
+
+- There is no option to select the `fish` version — a recent version is hardcoded.
+- Only Linux x64 is supported.

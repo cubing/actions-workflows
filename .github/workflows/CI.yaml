@@ -1,0 +1,23 @@
+# This is for testing `actions-workflows` itself.
+
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: make setup
+      - run: make lint
+
+  fish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ls /home/runner/work/actions-workflows/actions-workflows/.github/workflows/
+      - uses: ./actions/install-fish
+      - run: fish --version
