@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: oven-sh/setup-bun@v2
       - run: make setup
       - run: make lint
@@ -17,7 +17,7 @@ jobs:
   fish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - run: ls /home/runner/work/actions-workflows/actions-workflows/.github/workflows/
       - uses: ./actions/install-fish
       - run: fish --version
