@@ -17,11 +17,11 @@ jobs:
           echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
       # We'd use `github.event.head_commit.message`, but that includes the first line of the message. So we check out the code.
       - name: Check out code for release body calculation using `git` itself
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Calculate release body
         run: git log --format=%b -n 1 HEAD >> /tmp/body-path.txt
       - name: Publish release
-        uses: softprops/action-gh-release@c9b46fe7aad9f02afd89b12450b780f52dacfb2d
+        uses: softprops/action-gh-release@b4309332981a82ec1c5618f44dd2e27cc8bfbfda #v3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
