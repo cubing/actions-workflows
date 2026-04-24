@@ -24,7 +24,7 @@ jobs:
     permissions:
       contents: write
     if: startsWith(github.ref, 'refs/tags/v')
-    uses: cubing/actions-workflows/.github/workflows/publish-github-release.yaml@main
+    uses: cubing/actions-workflows/.github/workflows/publish-github-release.yaml@f68a4d12801e7e50851a1c2fa61cc92671199130 # v0.2.0
 CONTENTS
 ```
 
@@ -37,7 +37,7 @@ Because `fish` is already compiled, this is *much* faster than other actions tha
 Usage:
 
 ```yaml
-    uses: cubing/actions-workflows/actions/install-fish@main
+    uses: cubing/actions-workflows/actions/install-fish@f68a4d12801e7e50851a1c2fa61cc92671199130 # v0.2.0
 ```
 
 At the moment:
