@@ -20,13 +20,13 @@ const BIN_INSTALLATION_DIR = join(
 const BIN_INSTALLATION_PATH = join(BIN_INSTALLATION_DIR, "./fish");
 
 const metadata: { [version: string]: { url: string; hash: string } } = {
-  "4.3.3": {
-    url: "https://github.com/fish-shell/fish-shell/releases/download/4.3.3/fish-4.3.3-linux-x86_64.tar.xz",
-    hash: "3759c788d7941c5d0ca7713b259612211f4efb9041426ea415aaa8e4022d3392",
+  "4.6.0": {
+    url: "https://github.com/fish-shell/fish-shell/releases/download/4.6.0/fish-4.6.0-linux-x86_64.tar.xz",
+    hash: "497c9c4e3fb3c006fe9d2c9a5a5447c1c90490b6b4ce6bfaf75e53b495c82f36",
   },
 };
 
-async function installFish(version: string = "4.3.3"): Promise<void> {
+async function installFish(version: string = "4.6.0"): Promise<void> {
   assert(metadata[version]);
   const { url, hash } = metadata[version];
 
