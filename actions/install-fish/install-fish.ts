@@ -47,7 +47,7 @@ async function installFish(version: string = "4.6.0"): Promise<void> {
   assert.equal(
     new Uint8Array(
       await globalThis.crypto.subtle.digest(
-        "SHA256",
+        "SHA-256",
         // The `new Uint8Array(…)` is not necessary, but it makes the type checker happy.
         new Uint8Array(await readFile(tempArchive)),
       ),
